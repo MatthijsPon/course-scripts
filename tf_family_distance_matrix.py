@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Author: Matthijs Pon
-Student number: 1034076
+Date: 2020-11-19
 Description: Calculate the average alignment distance between protein families
              using blastp and write them to a comma-separated file.
-Usage: python3 exam_pon005.py <input.fasta> <output.csv>
+Usage: python3 tf_family_distance_matrix.py <input.fasta> <output.csv>
     input.fasta: name of the input fasta file
     output.csv: name of file to output to
 """
