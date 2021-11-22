@@ -1,6 +1,6 @@
 # course-scripts
 A selection of scripts I wrote during courses for reference. Each file has a short docstring to explain its function.\
-The following files are in this repository:\
+The following files are in this repository:
 - hidden_markov_models.py\
 *Created on: 2020-06-08*
 - protein_alignment.py\
