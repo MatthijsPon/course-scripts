@@ -1,0 +1,46 @@
+# ----- General information ----- #
+# Make sure you have docker privileges before trying to run this script.
+# Samples should be gunzipped beforehand.
+
+# -----  Sample variables   ----- #
+# If you want all the samples in a directory ran, give a regular expression with which the program can recognize
+# the structure of your data. Make sure that paired data only differs by the numbers 1 and 2. Your general expression
+# should have "{}" on the location of a 1 or 2.
+
+# If you leave the general expression empty, the program will try to run the samples given in sample_name. Make sure
+# that the paired samples are in a tuple e.g. ("S1.fq", "S2.fq"). The naming of samples does not matter in this mode.
+
+VAR sample_directory = "/lustre/BIF/nobackup/pon005/trimmed_samples/RNAseq/temp_unzipped"
+VAR regular_expression = "FG1848_*_{}P.fastq"
+
+VAR sample_names = "[(\"S1.fq\", \"S2.fq\"), (\"example_f.fq\", \"example_r.fq\")]"
+
+VAR output_directory = "/local/data/pon005/out/viromatch_automated"
+
+# -----  Process variables  ----- #
+# In my personal experience, ViroMatch ran best on the BIF thornton system when using 10 cores. However, if the machine
+# is very busy, you might want to reduce the amount of cores.
+VAR cores = 10
+
+# ----- Database variables  ----- #
+# Local refers to the thornton machine
+VAR ncbi_nt = "/local/data/pon005/viromatch_20210429/ncbi/nt"
+VAR ncbi_nt_file = "nt.fofn"
+
+VAR ncbi_nr = "/local/data/pon005/viromatch_20210429/ncbi/nr"
+VAR ncbi_nr_file = "nr.fofn"
+
+VAR viral_nt = "/local/data/pon005/viromatch_20210429/viral-only/nuc"
+VAR viral_nt_file = "ncbi_viral_refseq_gn_20191120.fna"
+
+VAR viral_nr = "/local/data/pon005/viromatch_20210429/viral-only/trans_nuc"
+VAR viral_nr_file = "ncbi_viral_refseq_gn_20191120.dmnd"
+
+VAR taxonomy = "/local/data/pon005/viromatch_20210429/taxonomy"
+VAR taxonomy_file = "taxonomy.tsv"
+
+VAR host = "/lustre/BIF/nobackup/pon005/databases/spodoptera_exigua_assembly/GCA_011316535.1_NJAU_Sexi_v1"
+VAR host_file = "GCA_011316535.1_NJAU_Sexi_v1_genomic.fna.gz"
+
+VAR adaptor = "/local/data/pon005/viromatch_20210429/adaptor"
+VAR adaptor_file = "adaptor.fqtrim"
